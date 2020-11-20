@@ -46,9 +46,7 @@
             tabelaEmails.clear();
             tabelaEmails.rows.add(dataSet).draw();
         }).fail(function (jqXHR, status, err) {
-            if (StrToInt(status) == 0) {
-                exibirMensagemAviso('Aviso!', 'Servidor não encontrado');
-            }
+            exibirMensagem('Erro!','Não foi possível estabelecer conexão com o servidor', 'error');
         });
     });
 </script>

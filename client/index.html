@@ -84,7 +84,7 @@
                     exibirMensagem('Erro fatal!', 'Um erro inesperado aconteceu!!, contate o admin', 'error');
                 }
             }).fail(function (jqXHR, status, err) {
-                exibirMensagem(jqXHR.responseJSON.title, jqXHR.responseJSON.message, 'error');
+                exibirMensagem('Erro!','Não foi possível estabelecer conexão com o servidor', 'error');
             });
         });
 
