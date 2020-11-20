@@ -17,7 +17,24 @@
 
 ### Telas
 
+#Tela Principal
 ![Tela Principal](https://github.com/PauloHenrique7010/LandingPageFlipFlop/blob/main/anexos/tela_principal.png)
+
+
+#Tela aviso e-mail cadastrado
+![Tela cadastrado](https://github.com/PauloHenrique7010/LandingPageFlipFlop/blob/main/anexos/tela_email_valido.png)
+
+
+#Tela aviso e-mail inválido
+![Tela e-mail ivalido](https://github.com/PauloHenrique7010/LandingPageFlipFlop/blob/main/anexos/tela_email_nao_valido.png)
+
+
+#Tela aviso error conexão com servidor(Back-end)
+![Tela erro](https://github.com/PauloHenrique7010/LandingPageFlipFlop/blob/main/anexos/tela_erro_conectar_server.png)
+
+
+#Tela e-mails cadastrados
+![Tela emails](https://github.com/PauloHenrique7010/LandingPageFlipFlop/blob/main/anexos/tela_emails_cadastrados.png)
 
 
 ### Pré-requisitos
