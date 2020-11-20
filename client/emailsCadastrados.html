@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.22/css/jquery.dataTables.min.css">
+    <script type="text/javascript" src=" https://cdn.datatables.net/1.10.13/js/jquery.dataTables.min.js"></script>
+</head>
+<script>
+    $(document).ready(function () {
+        var tabelaEmails = $("#tabelaEmails").DataTable({
+            columns: [{
+                title: 'Código',
+            },
+            {
+                title: 'E-mail',
+
+            }],
+            language: {
+                "url": "//cdn.datatables.net/plug-ins/1.10.21/i18n/Portuguese.json"
+            }
+        });
+
+
+        $.ajax({
+            url: '../server/buscarEmail.php',
+            type: "GET",            
+        }).done(function (resposta) {
+            var dataSet = [];
+            
+            $.each(resposta.registros, function (index, data) {
+                
+
+                dataSet.push([
+                    data.cod_email,
+                    data.email
+                ]);
+            });
+
+            tabelaEmails.clear();
+            tabelaEmails.rows.add(dataSet).draw();
+        }).fail(function (jqXHR, status, err) {
+            if (StrToInt(status) == 0) {
+                exibirMensagemAviso('Aviso!', 'Servidor não encontrado');
+            }
+        });
+    });
+</script>
+
+<body>
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+        <ul class="navbar-nav">
+            <li class="nav-item active">
+                <a class="nav-link" href="index.html">Voltar</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">GitHub</a>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <br>
+        <div class="form-row">
+            <div class="col-12">
+                <h3>E-mails cadastrados</h3>
+            </div>
+
+        </div>
+        <div class="row mt-2">
+            <div class="col-12">
+                <table class="table table-hover table-striped" id="tabelaEmails">
+                </table>
+            </div>
+        </div>
+
+
+    </div>
+
+
+</body>
+
+</html>
