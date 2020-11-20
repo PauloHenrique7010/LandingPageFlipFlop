@@ -1,13 +1,11 @@
 <?php
-
 //referencia
 //https://developer.mozilla.org/pt-BR/docs/Web/HTTP/Status
 
 include('./conexao.php');
 
 //recebe o email do fron-end
-$json = $_POST['data'];
-$json = json_decode($json);
+$json = json_decode($_POST['data']);
 $email = $json->email;
 
 $resposta = array();
@@ -49,7 +47,6 @@ echo json_encode($resposta);
 
 function verificaEmailExiste($email)
 {
-
     global $conexao;
 
     // Check connection
@@ -58,7 +55,6 @@ function verificaEmailExiste($email)
     }
     $query = "select * from email where email = '$email'"; // where email = '"+$email+"'";
     $select = mysqli_query($conexao, $query);
-
 
     if ($select->num_rows > 0)
         return true;

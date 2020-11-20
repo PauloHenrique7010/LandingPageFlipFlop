@@ -1,28 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+<head>    
+    <title>Teste Flip Flop</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="Teste para empresa Flip Flop">
-    <meta name="author" content="Paulo">
+    <meta name="author" content="Paulo">   
 
-    <title>Teste Flip Flop</title>
-
-    <!-- Bootstrap core CSS -->
-    <!--<link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Custom fonts for this template -->
-    <!--<link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet">-->
-    <link href="vendor/simple-line-icons/css/simple-line-icons.css" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet"
-        type="text/css">
-
+    
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script> <!--SweetAlert-->
     <style>
         .carousel-control-prev-icon {
             background-color: black;
@@ -38,11 +28,9 @@
             max-height: 50vh;
 
         }
-    </style>
-    <!-- Custom styles for this template -->
-    <link href="css/landing-page.min.css" rel="stylesheet">
+    </style>    
+    <link href="css/estilo.css" rel="stylesheet">
 </head>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script>
 
     $(document).ready(function () {
@@ -61,7 +49,7 @@
 
 
         $("#edtEmail").on('keypress', function (e) {
-            if (e.which == 13) 
+            if (e.which == 13)
                 $('#btnCadastrarEmail').click();
         });
 
@@ -84,13 +72,13 @@
                 else if (response.status == 202) {//erro na hora de cadastrar
                     exibirMensagem(titulo, msg, 'error');
                 }
-                else if (response.status == 203) { //email não e valido
+                else if (response.status == 203) { //email não e valido ou email ja esta cadastrado
                     exibirMensagem(titulo, msg, 'warning');
                 }
                 else {
                     exibirMensagem('Erro fatal!', 'Um erro inesperado aconteceu!!, contate o admin', 'error');
                 }
-                
+
             }).fail(function (jqXHR, status, err) {
                 exibirMensagem('Erro!', 'Não foi possível estabelecer conexão com o servidor', 'error');
             });
@@ -99,37 +87,28 @@
     });
 </script>
 
-<body class="bg-light">
+<body>
     <!-- Navigation -->
     <nav class="navbar navbar-light bg-light static-top">
         <div class="container">
-            <div class="col-4">
-                <span> LandingPage Flip Flop</span>
-            </div>
-            <div class="col-4">
-                <a class="btn btn-primary" href="emailsCadastrados">E-mails cadastrados</a>
-            </div>
-            <div class="col-4">
-                <a href="https://github.com/PauloHenrique7010/"><span>GitHub</span></a>
-            </div>
+            <span> LandingPage Flip Flop</span>
+            <a class="btn btn-primary" href="emailsCadastrados">E-mails cadastrados</a>
         </div>
     </nav>
 
-    <!-- Icons Grid -->
+
     <section class="features-icons bg-light text-center">
         <div class="container">
             <div class="row">
                 <div class="col-lg-8">
                     <h4>Smart TV Full HD LED 43” Samsung 43T5300A - Wi-Fi HDR 2 HDMI 1 USB</h4>
-
-
                     <div class="carousel slide" id="carrossel" data-ride="carousel">
-
                         <!-- Indicators -->
                         <ul class="carousel-indicators">
                             <li data-target="#carrossel" data-slide-to="0" class="active"></li>
                             <li data-target="#carrossel" data-slide-to="1"></li>
                             <li data-target="#carrossel" data-slide-to="2"></li>
+                            <li data-target="#carrossel" data-slide-to="3"></li>
                         </ul>
 
                         <!-- The slideshow -->
@@ -139,6 +118,9 @@
                             </div>
                             <div class="carousel-item">
                                 <img src="img/lateral.jpg" alt="Lateral da TV" class="d-block w-100 itemCarrossel">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="img/imgpe.jpg" alt="Selo Imentro" class="d-block w-100 itemCarrossel">
                             </div>
                             <div class="carousel-item">
                                 <img src="img/imgSelo.jpg" alt="Selo Imentro" class="d-block w-100 itemCarrossel">
@@ -175,7 +157,7 @@
         </div>
     </section>
 
-    <section class="">
+    <section class="bg-light">
         <div class="container">
             <div class="row">
                 <div class="col-12">
@@ -204,19 +186,27 @@
                                 <td>Samsung</td>
                             </tr>
                             <tr>
-                                <td>Tipo</td>
                                 <td>Smart TV</td>
+                                <td>Sim</td>
                             </tr>
                             <tr>
                                 <td>Polegadas</td>
                                 <td> 43"</td>
+                            </tr>
+                            <tr>
+                                <td>Tipo</td>
+                                <td>LED</td>
+                            </tr>
+                            <tr>
+                                <td>Voltagem</td>
+                                <td>BiVolt</td>
                             </tr>
                         </tbody>
                     </table>
                 </div>
             </div>
         </div>
-    </section>
+        <br>
+    </section>   
 </body>
-
 </html>

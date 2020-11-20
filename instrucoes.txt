@@ -1,0 +1,12 @@
+1 - Criar banco de dados com o nome "landingpage"
+2 - Criar tabela {
+    create table email (cod_email int primary key auto_increment,
+                    email varchar(50) not null));
+
+    OU 
+
+    rodar o comando:
+    mysql -u <usuariobanco> -p <senha> < bd.sql //sera criado automaticamente o database e a tabela 
+    OBS: SE NAO POSSUIR SENHA PARA ACESSAR O BANCO, APAGAR O PARAMETRO "-p" e "<senha>"
+}
+Acessar localhost -> nome da pasta -> client

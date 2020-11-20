@@ -6,11 +6,10 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="https://cdn.datatables.net/1.10.22/css/jquery.dataTables.min.css">
-    <script type="text/javascript" src=" https://cdn.datatables.net/1.10.13/js/jquery.dataTables.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src=" https://cdn.datatables.net/1.10.13/js/jquery.dataTables.min.js"></script>        
 </head>
 <script>
     $(document).ready(function () {
@@ -28,21 +27,18 @@
         });
 
 
+        //assim que carregar a tela, busca os registros no banco
         $.ajax({
             url: '../server/buscarEmail.php',
             type: "GET",            
         }).done(function (resposta) {
-            var dataSet = [];
-            
+            var dataSet = [];            
             $.each(resposta.registros, function (index, data) {
-                
-
                 dataSet.push([
                     data.cod_email,
                     data.email
                 ]);
             });
-
             tabelaEmails.clear();
             tabelaEmails.rows.add(dataSet).draw();
         }).fail(function (jqXHR, status, err) {
@@ -51,7 +47,7 @@
     });
 </script>
 
-<body class="">
+<body class="bg-light">
     <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
         <ul class="navbar-nav">
             <li class="nav-item active">
@@ -59,14 +55,12 @@
             </li>            
         </ul>
     </nav>
-
     <div class="container">
         <br>
         <div class="form-row">
             <div class="col-12">
                 <h3>E-mails cadastrados</h3>
             </div>
-
         </div>
         <div class="row mt-2">
             <div class="col-12">
@@ -74,11 +68,6 @@
                 </table>
             </div>
         </div>
-
-
     </div>
-
-
 </body>
-
 </html>
