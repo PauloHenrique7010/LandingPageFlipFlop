@@ -5,8 +5,8 @@
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
+    <meta name="description" content="Teste para empresa Flip Flop">
+    <meta name="author" content="Paulo">
 
     <title>Teste Flip Flop</title>
 
@@ -22,9 +22,7 @@
     <!-- Custom styles for this template -->
     <link href="css/landing-page.min.css" rel="stylesheet">
 </head>
-
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
 <script>
 
     $(document).ready(function () {
@@ -71,159 +69,113 @@
                 exibirMensagem(jqXHR.responseJSON.title, jqXHR.responseJSON.message, 'error');
             });
         });
+
+        $(".imgCarrossel").on('click', function () {
+            $("#imgPrincipal").attr('src',$(this).attr('src'));                        
+        });
     });
 </script>
 
-<body>
-
+<body class="bg-light">
     <!-- Navigation -->
     <nav class="navbar navbar-light bg-light static-top">
         <div class="container">
-            <span> Teste Flip Flop</span>
+            <span> Teste Flip Flop</span>            
             <a class="btn btn-primary" href="emailsCadastrados">E-mails cadastrados</a>
+            <span>git hub</span>
         </div>
     </nav>
-
-
 
     <!-- Icons Grid -->
     <section class="features-icons bg-light text-center">
         <div class="container">
             <div class="row">
-                <div class="col-lg-8">
-                    <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
+                <div class="col-lg-2 align-self-center mt-4 border-circle">
+                    <div class="mx-auto mt-2 p-2">
+                        <img class="img-fluid imgCarrossel" src="img/imgDimensoes.jpg" alt="">
+                    </div>
+                    <div class="mx-auto mt-2 p-2">
+                        <img class="img-fluid imgCarrossel" src="img/imgpe.jpg" alt="">
+                    </div>
+                    <div class="mx-auto mt-2 p-2">
+                        <img class="img-fluid imgCarrossel" src="img/imgSelo.jpg" alt="">
+                    </div>
+                    <div class="mx-auto mt-2 p-2">
+                        <img class="img-fluid imgCarrossel" src="img/imgFrente.jpg" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-6 mt-2">
+                    <div class="mx-auto mb-5 mb-lg-0">
                         <h3>Smart TV Full HD LED 43” Samsung 43T5300A - Wi-Fi HDR 2 HDMI 1 USB</h3>
-                        <img class="img-fluid mb-3" src="img/imgFrente.jpg" alt="">
-
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
-                        <p class="lead mb-0">R$1.799,30 à vista</p>
-                        <div class="form-row">
-                            
-                                <input type="email" id="edtEmail" class="form-control form-control-lg"
-                                    placeholder="Enter your email...">
-                            
-                            
-                                <button type="submit" id="btnCadastrarEmail" class="btn btn-block btn-lg btn-primary">Sign up!</button>
-                            
+                        <div class="mx-auto mt-lg-8">
+                            <img class="img-fluid" id="imgPrincipal" src="img/imgFrente.jpg" alt="">
                         </div>
-
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-
-
-    <!-- Testimonials -->
-    <section class="testimonials text-center bg-light">
-        <div class="container">
-            <h2 class="mb-5">What people are saying...</h2>
-            <div class="row">
-                <div class="col-lg-4">
-                    <div class="testimonial-item mx-auto mb-5 mb-lg-0">
-                        <img class="img-fluid rounded-circle mb-3" src="img/testimonials-1.jpg" alt="">
-                        <h5>Margaret E.</h5>
-                        <p class="font-weight-light mb-0">"This is fantastic! Thanks so much guys!"</p>
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="testimonial-item mx-auto mb-5 mb-lg-0">
-                        <img class="img-fluid rounded-circle mb-3" src="img/testimonials-2.jpg" alt="">
-                        <h5>Fred S.</h5>
-                        <p class="font-weight-light mb-0">"Bootstrap is amazing. I've been using it to create lots of
-                            super nice landing pages."</p>
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="testimonial-item mx-auto mb-5 mb-lg-0">
-                        <img class="img-fluid rounded-circle mb-3" src="img/testimonials-3.jpg" alt="">
-                        <h5>Sarah W.</h5>
-                        <p class="font-weight-light mb-0">"Thanks so much for making these free resources available to
-                            us!"</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Call to Action -->
-    <section class="call-to-action text-white text-center">
-        <div class="overlay"></div>
-        <div class="container">
-            <div class="row">
-                <div class="col-xl-9 mx-auto">
-                    <h2 class="mb-4">Ready to get started? Sign up now!</h2>
-                </div>
-                <div class="col-md-10 col-lg-8 col-xl-7 mx-auto">
-                    <form>
-                        <div class="form-row">
-                            <div class="col-12 col-md-9 mb-2 mb-md-0">
-                                <input type="email" class="form-control form-control-lg"
-                                    placeholder="Enter your email...">
-                            </div>
-                            <div class="col-12 col-md-3">
-                                <button type="submit" class="btn btn-block btn-lg btn-primary">Sign up!</button>
-                            </div>
+                        <div class="mt-4">
+                            <h2 class="mb-0 text-success"><b>R$1.799,30 à vista</b></h2>
                         </div>
-                    </form>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 align-self-center mb-4">
+                    <div class="mx-auto mb-5 mb-lg-0 mb-lg-3">
+                        <h2 class="mb-4">Receba essa e outras ofertas no seu e-mail!</h2>
+                    </div>
+                    <div class="col-xl-12 mx-auto">
+                        <input type="email" id="edtEmail" class="form-control form-control-lg"
+                            placeholder="Digite aqui seu e-mail">
+
+                    </div>
+                    <div class="col-xl-12 mx-auto mt-2">
+                        <button id="btnCadastrarEmail" class="btn btn-block btn-lg btn-primary">Cadastrar</button>
+
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="footer bg-light">
+    <section class="">
         <div class="container">
             <div class="row">
-                <div class="col-lg-6 h-100 text-center text-lg-left my-auto">
-                    <ul class="list-inline mb-2">
-                        <li class="list-inline-item">
-                            <a href="#">About</a>
-                        </li>
-                        <li class="list-inline-item">&sdot;</li>
-                        <li class="list-inline-item">
-                            <a href="#">Contact</a>
-                        </li>
-                        <li class="list-inline-item">&sdot;</li>
-                        <li class="list-inline-item">
-                            <a href="#">Terms of Use</a>
-                        </li>
-                        <li class="list-inline-item">&sdot;</li>
-                        <li class="list-inline-item">
-                            <a href="#">Privacy Policy</a>
-                        </li>
-                    </ul>
-                    <p class="text-muted small mb-4 mb-lg-0">&copy; Your Website 2020. All Rights Reserved.</p>
+                <div class="col-12">
+                    <h3>Descrição do produto</h3>
                 </div>
-                <div class="col-lg-6 h-100 text-center text-lg-right my-auto">
-                    <ul class="list-inline mb-0">
-                        <li class="list-inline-item mr-3">
-                            <a href="#">
-                                <i class="fab fa-facebook fa-2x fa-fw"></i>
-                            </a>
-                        </li>
-                        <li class="list-inline-item mr-3">
-                            <a href="#">
-                                <i class="fab fa-twitter-square fa-2x fa-fw"></i>
-                            </a>
-                        </li>
-                        <li class="list-inline-item">
-                            <a href="#">
-                                <i class="fab fa-instagram fa-2x fa-fw"></i>
-                            </a>
-                        </li>
-                    </ul>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    Smart TV Full HD LED 43” Samsung 43T5300A - Wi-Fi HDR 2 HDMI 1 USB
+
+                    Curta seus filmes, série e programas favoritos com a máxima qualidade de imagem e som com a Smart TV
+                    Samsung 43T5300A.
+                    Com uma tela LED de 43" e resolução Full HD, ela oferece uma quantidade muito maior de detalhes,
+                    mais nitidez e cores vibrantes que vão surpreender você e todos seus amigos e familiares. A
+                    conectividade Wi-Fi Direct e as diversas entradas HDMI, USB e ethernet vão manter você sempre
+                    conectado e por dentro de tudo. Além disso, ela também conta com sistema operacional Tizen,
+                    processador Hyper Real, HDR e sistema de espelhamento de smartphone para TV.
+                </div>
+            </div>
+            <div class="row mt-4">
+                <div class="col-12">
+                    <table class="table table-striped">
+                        <tbody>
+                            <tr>
+                                <td>Marca</td>
+                                <td>Samsung</td>
+                            </tr>
+                            <tr>
+                                <td>Tipo</td>
+                                <td>Smart TV</td>
+                            </tr>
+                            <tr>
+                                <td>Polegadas</td>
+                                <td> 43"</td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
             </div>
         </div>
-    </footer>
-
-    <!-- Bootstrap core JavaScript -->
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-
+    </section>
 </body>
+
+</html>
